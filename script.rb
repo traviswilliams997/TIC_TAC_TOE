@@ -1,3 +1,12 @@
+class Player1
+  def initialize
+    @score = 0;
+
+  end
+    
+end
+
+
 #Holds functions and state of plaer positions
 class Board
   def initialize
