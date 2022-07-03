@@ -3,21 +3,22 @@ class Player1
     @score = 0;
 
   end
-    
+  
+
 end
 
 
 #Holds functions and state of plaer positions
 class Board
   def initialize
-      let a1 = ' ';
-      let a2 = ' ';
-      let a3 = ' ';
-      let b1 = ' ';
-      let b2 = ' ';
-      let b3 = ' ';
-      let c1 = ' ';
-      let c2 = ' ';
-      let c3 = ' ';
+      @a1 = ' ';
+      @a2 = ' ';
+      @a3 = ' ';
+      @b1 = ' ';
+      @b2 = ' ';
+      @b3 = ' ';
+      @c1 = ' ';
+      @c2 = ' ';
+      @c3 = ' ';
   end
 end
