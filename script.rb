@@ -3,13 +3,16 @@ class Player1
     @score = 0;
 
   end
-  
+  def player_choice (choice, position)
+   position = choice;
+  end
 
 end
 
 
 #Holds functions and state of plaer positions
 class Board
+    
   def initialize
       @a1 = ' ';
       @a2 = ' ';
