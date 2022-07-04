@@ -4,12 +4,17 @@ class Board
     $a1 = 'a';
     $a2 = 'b';
     $a3 = 'c';
-    $b1 = ' ';
-    $b2 = ' ';
-    $b3 = ' ';
-    $c1 = ' ';
-    $c2 = ' ';
-    $c3 = ' ';
+    $b1 = 'd';
+    $b2 = 'e';
+    $b3 = 'f';
+    $c1 = 'g';
+    $c2 = 'h';
+    $c3 = 'i';
+  end
+  def board_state
+    puts " #{$a1} #{$a2} #{$a3}"
+    puts " #{$b1} #{$b2} #{$b3}"
+    puts " #{$c1} #{$c2} #{$c3}"
   end
 end
 
@@ -52,6 +57,8 @@ end
 
 
 board = Board.new
+board.board_state
 p1 = Player1.new()
 p1.player_choice("X", "c3")
+board.board_state
 
