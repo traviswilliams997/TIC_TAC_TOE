@@ -21,7 +21,7 @@ end
 class Player1 
 
   def initialize()
-    @score = 0;
+ 
   end
     
   def player_choice(position)
@@ -55,10 +55,10 @@ class Player1
   end  
 end
 
-class Player1 
+class Player2 
 
   def initialize()
-    @score = 0;
+
   end
     
   def player_choice(position)
@@ -91,12 +91,19 @@ class Player1
     end   
   end  
 end
+ class Game 
+  def initialize
+  
+  end
 
+end
 
 
 board = Board.new
 board.board_state
 p1 = Player1.new()
-p1.player_choice("X", "c3")
+p1.player_choice("c3")
+p2 = Player2.new()
+p2.player_choice("a2")
 board.board_state
 
