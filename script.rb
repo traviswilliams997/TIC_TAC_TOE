@@ -55,6 +55,44 @@ class Player1
   end  
 end
 
+class Player1 
+
+  def initialize()
+    @score = 0;
+  end
+    
+  def player_choice(position)
+    if position == "a1"
+      $a1 = "O";
+    end
+    if position == "a2"
+      $a2 = "O";
+    end
+    if position == "a3"
+      $a3 = "O";
+    end
+    if position == "b1"
+      $b1 = "O";
+    end
+    if position == "b2"
+      $b2 = "O";
+    end
+    if position == "b3"
+      $b3 = "O";
+    end
+    if position == "c1"
+      $c1 = "O";
+    end
+    if position == "c2"
+      $c2 = "O";
+    end
+    if position == "c3"
+      $c3 = "O";
+    end   
+  end  
+end
+
+
 
 board = Board.new
 board.board_state
