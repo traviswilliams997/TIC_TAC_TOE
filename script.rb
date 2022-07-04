@@ -24,33 +24,33 @@ class Player1
     @score = 0;
   end
     
-  def player_choice(choice, position)
+  def player_choice(position)
     if position == "a1"
-      $a1 = choice;
+      $a1 = "X";
     end
     if position == "a2"
-      $a2 = choice;
+      $a2 = "X";
     end
     if position == "a3"
-      $a3 = choice;
+      $a3 = "X";
     end
     if position == "b1"
-      $b1 = choice;
+      $b1 = "X";
     end
     if position == "b2"
-      $b2 = choice;
+      $b2 = "X";
     end
     if position == "b3"
-      $b3 = choice;
+      $b3 = "X";
     end
     if position == "c1"
-      $c1 = choice;
+      $c1 = "X";
     end
     if position == "c2"
-      $c2 = choice;
+      $c2 = "X";
     end
     if position == "c3"
-      $c3 = choice;
+      $c3 = "X";
     end   
   end  
 end
