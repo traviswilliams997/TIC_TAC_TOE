@@ -1,15 +1,15 @@
 class Board 
 
   def initialize
-    $a1 = 'a';
-    $a2 = 'b';
-    $a3 = 'c';
-    $b1 = 'd';
-    $b2 = 'e';
-    $b3 = 'f';
-    $c1 = 'g';
-    $c2 = 'h';
-    $c3 = 'i';
+    $a1 = 'a1';
+    $a2 = 'a2';
+    $a3 = 'a3';
+    $b1 = 'b1';
+    $b2 = 'b2';
+    $b3 = 'b3';
+    $c1 = 'c1';
+    $c2 = 'c2';
+    $c3 = 'c3';
   end
   def board_state
     puts " #{$a1} #{$a2} #{$a3}"
@@ -92,76 +92,113 @@ class Player2
   end  
 end
  class Game 
-  def initialize
+  #attr_accessor :board
+  def initialize()
+    @@run = true
+    puts "New Game of Tic Tac Toe"
+    @board = Board.new
+    puts "Here are the board positions"
+    @board.board_state
+    @p1 = Player1.new()
+    @p2 = Player2.new()
   
+  end
+  def play_round
+    while(@@run)
+    puts "Player 1. Enter positon for X"
+    puts "Eg. For first row & first column enter a1"
+    choice_1 = gets.chomp
+    @p1.player_choice(choice_1)
+    self.check_who_won
+    self.board_positions
+    if @@run == false
+      break
+    end 
+
+    puts "Player 2. Enter positon for 0"
+    puts "Eg. For first row & first column enter a1"
+    choice_2 = gets.chomp
+    @p2.player_choice(choice_2)
+    self.check_who_won
+    self.board_positions
+    end
+  end
+ 
+   def board_positions
+     @board.board_state
   end
   def check_who_won
     if $a1 == "X" && $a2 == "X" && $a3 == "X"
       p "Player 1 won"
+      @@run = false
     end
     if $b1 == "X" && $b2 == "X" && $b3 == "X"
       p "Player 1 won"
+      @@run = false
     end
     if $c1 == "X" && $c2 == "X" && $c3 == "X"
       p "Player 1 won"
+      @@run = false
     end
     if $a1 == "X" && $b1 == "X" && $c1 == "X"
       p "Player 1 won"
+      @@run = false
     end
     if $a2 == "X" && $b2 == "X" && $c2 == "X"
       p "Player 1 won"
+      @@run = false
     end
     if $a3 == "X" && $b3 == "X" && $c3 == "X"
       p "Player 1 won"
+      @@run = false
     end
     if $a1 == "X" && $b2 == "X" && $c3 == "X"
       p "Player 1 won"
+      @@run = false
     end
     if $a3 == "X" && $b2 == "X" && $c1 == "X"
       p "Player 1 won"
+      @@run = false
     end
 
     if $a1 == "O" && $a2 == "O" && $a3 == "O"
       p "Player 2 won"
+      @@run = false
     end
     if $b1 == "O" && $b2 == "O" && $b3 == "O"
       p "Player 2 won"
+      @@run = false
     end
     if $c1 == "O" && $c2 == "O" && $c3 == "O"
       p "Player 2 won"
+      @@run = false
     end
     if $a1 == "O" && $b1 == "O" && $c1 == "O"
       p "Player 2 won"
+      @@run = false
     end
     if $a2 == "O" && $b2 == "O" && $c2 == "O"
       p "Player 2 won"
+      @@run = false
     end
     if $a3 == "O" && $b3 == "O" && $c3 == "O"
       p "Player 2 won"
+      @@run = false
     end
     if $a1 == "O" && $b2 == "O" && $c3 == "O"
       p "Player 2 won"
+      @@run = false
     end
     if $a3 == "O" && $b2 == "O" && $c1 == "O"
       p "Player 2 won"
+      @@run = false
     end
   end 
+
+  
 
 end
 
 
-board = Board.new
-board.board_state
-p1 = Player1.new()
-p1.player_choice("a1")
-p1.player_choice("a2")
-p1.player_choice("a3")
-p2 = Player2.new()
-p2.player_choice("c1")
-p2.player_choice("c2")
-p2.player_choice("c3")
-
-board.board_state
 new_game = Game.new
-
-new_game.check_who_won
+new_game.play_round
