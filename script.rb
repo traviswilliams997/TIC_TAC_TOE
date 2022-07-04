@@ -95,6 +95,57 @@ end
   def initialize
   
   end
+  def check_who_won
+    if $a1 == "X" && $a2 == "X" && $a3 == "X"
+      p "Player 1 won"
+    end
+    if $b1 == "X" && $b2 == "X" && $b3 == "X"
+      p "Player 1 won"
+    end
+    if $c1 == "X" && $c2 == "X" && $c3 == "X"
+      p "Player 1 won"
+    end
+    if $a1 == "X" && $b1 == "X" && $c1 == "X"
+      p "Player 1 won"
+    end
+    if $a2 == "X" && $b2 == "X" && $c2 == "X"
+      p "Player 1 won"
+    end
+    if $a3 == "X" && $b3 == "X" && $c3 == "X"
+      p "Player 1 won"
+    end
+    if $a1 == "X" && $b2 == "X" && $c3 == "X"
+      p "Player 1 won"
+    end
+    if $a3 == "X" && $b2 == "X" && $c1 == "X"
+      p "Player 1 won"
+    end
+
+    if $a1 == "O" && $a2 == "O" && $a3 == "O"
+      p "Player 2 won"
+    end
+    if $b1 == "O" && $b2 == "O" && $b3 == "O"
+      p "Player 2 won"
+    end
+    if $c1 == "O" && $c2 == "O" && $c3 == "O"
+      p "Player 2 won"
+    end
+    if $a1 == "O" && $b1 == "O" && $c1 == "O"
+      p "Player 2 won"
+    end
+    if $a2 == "O" && $b2 == "O" && $c2 == "O"
+      p "Player 2 won"
+    end
+    if $a3 == "O" && $b3 == "O" && $c3 == "O"
+      p "Player 2 won"
+    end
+    if $a1 == "O" && $b2 == "O" && $c3 == "O"
+      p "Player 2 won"
+    end
+    if $a3 == "O" && $b2 == "O" && $c1 == "O"
+      p "Player 2 won"
+    end
+  end 
 
 end
 
@@ -102,8 +153,15 @@ end
 board = Board.new
 board.board_state
 p1 = Player1.new()
-p1.player_choice("c3")
+p1.player_choice("a1")
+p1.player_choice("a2")
+p1.player_choice("a3")
 p2 = Player2.new()
-p2.player_choice("a2")
-board.board_state
+p2.player_choice("c1")
+p2.player_choice("c2")
+p2.player_choice("c3")
 
+board.board_state
+new_game = Game.new
+
+new_game.check_who_won
