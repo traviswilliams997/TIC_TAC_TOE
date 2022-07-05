@@ -189,6 +189,8 @@ end
       @@run = true
       @board.reset_board
       puts "New Round"
+      puts "Player 1 score is #{@p1.score}"
+      puts "Player 2 score is #{@p2.score}"
       @board.board_state
 
 
