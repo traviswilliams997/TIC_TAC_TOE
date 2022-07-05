@@ -104,11 +104,13 @@ end
     @board.board_state
     @p1 = Player1.new()
     @p2 = Player2.new()
-    i = 0
-    loop do
-      i = i + 1
+
+    
+    for i in 1..5 do  
+      p "num loop = #{i}" 
       self.play_round
       if i == 5
+        puts "noooooo"
         if @p1.score > @p2.score
           puts "PLayer 1 Won the match"
         end
@@ -117,6 +119,8 @@ end
         end
         break       # this will cause execution to exit the loop
       end
+      @@run = true
+
     end
 
   end
