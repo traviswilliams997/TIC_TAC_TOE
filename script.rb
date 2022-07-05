@@ -46,7 +46,7 @@ class Player1
     
   def player_choice(position)
     if position == "a1" && $a1 == "a1"
-      $a1 = "X";
+      $a1 = "X ";
     elsif position == "a1" 
       self.new_choice
     end
@@ -56,12 +56,12 @@ class Player1
       self.new_choice
     end
     if position == "a3" && $a3 == "a3"
-      $a3 = "X";
+      $a3 = " X";
     elsif position == "a3" 
       self.new_choice
     end
     if position == "b1" && $b1 == "b1"
-      $b1 = "X";
+      $b1 = "X ";
     elsif position == "b1" 
       self.new_choice
     end
@@ -71,27 +71,25 @@ class Player1
       self.new_choice
     end
     if position == "b3" && $b3 == "b3"
-      $b3 = "X";
+      $b3 = " X";
     elsif position == "b3" 
       self.new_choice
     end
     if position == "c1" && $c1 == "c1"
-    $c1 = "X";
-  elsif position == "c1" 
-    self.new_choice
-
-  end
-  if position == "c2" && $c2 == "c2"
-    $c2 = "X";
-  elsif position == "c2" 
-    self.new_choice
-  end
-  if position == "c3" && $c3 == "c3"
-    $c3 = "X";
-  elsif position == "c3" 
-    self.new_choice
-
-  end 
+      $c1 = "X ";
+    elsif position == "c1" 
+      self.new_choice
+    end
+    if position == "c2" && $c2 == "c2"
+      $c2 = "X";
+    elsif position == "c2" 
+      self.new_choice
+    end
+    if position == "c3" && $c3 == "c3"
+      $c3 = " X";
+    elsif position == "c3" 
+      self.new_choice
+    end 
   end  
 end
 
@@ -106,11 +104,11 @@ class Player2
     puts "Enter a different position"
     @choice = gets.chomp
     self.player_choice(@choice)
-   end  
+  end  
 
   def player_choice(position)
     if position == "a1" && $a1 == "a1"
-      $a1 = "O";
+      $a1 = "O ";
     elsif position == "a1" 
     self.new_choice
 
@@ -122,13 +120,13 @@ class Player2
 
     end
     if position == "a3" && $a3 == "a3"
-      $a3 = "O";
+      $a3 = " O";
     elsif position == "a3" 
     self.new_choice
 
     end
     if position == "b1" && $b1 == "b1"
-      $b1 = "O";
+      $b1 = "O ";
     elsif position == "b1" 
     self.new_choice
 
@@ -140,13 +138,13 @@ class Player2
 
     end
     if position == "b3" && $b3 == "b3"
-      $b3= "O";
+      $b3= " O";
     elsif position == "b3" 
     self.new_choice
 
     end
     if position == "c1" && $c1 == "c1"
-      $c1 = "O";
+      $c1 = "O ";
     elsif position == "c1" 
     self.new_choice
 
@@ -158,7 +156,7 @@ class Player2
 
     end
     if position == "c3" && $c3 == "c3"
-      $c3 = "O";
+      $c3 = " O";
     elsif position == "c3" 
     self.new_choice
 
@@ -229,22 +227,22 @@ end
      @board.board_state
    end
   def check_who_won
-    if $a1 == "X" && $a2 == "X" && $a3 == "X"
+    if $a1 == "X " && $a2 == "X" && $a3 == " X"
       puts "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
-    if $b1 == "X" && $b2 == "X" && $b3 == "X"
+    if $b1 == "X " && $b2 == "X" && $b3 == " X"
       puts "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
-    if $c1 == "X" && $c2 == "X" && $c3 == "X"
+    if $c1 == "X " && $c2 == "X" && $c3 == " X"
       puts "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
-    if $a1 == "X" && $b1 == "X" && $c1 == "X"
+    if $a1 == "X " && $b1 == "X "  && $c1 == "X "
       puts "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
@@ -254,38 +252,38 @@ end
       @p1.score =  @p1.score + 1;
       @@run = false
     end
-    if $a3 == "X" && $b3 == "X" && $c3 == "X"
+    if $a3 == " X" && $b3 == " X" && $c3 == " X"
       puts "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
-    if $a1 == "X" && $b2 == "X" && $c3 == "X"
+    if $a1 == "X " && $b2 == "X" && $c3 == " X"
       puts "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
-    if $a3 == "X" && $b2 == "X" && $c1 == "X"
+    if $a3 == " X" && $b2 == "X" && $c1 == "X "
       puts "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
 
-    if $a1 == "O" && $a2 == "O" && $a3 == "O"
+    if $a1 == "O " && $a2 == "O" && $a3 == " O"
       puts "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
-    if $b1 == "O" && $b2 == "O" && $b3 == "O"
+    if $b1 == "O " && $b2 == "O" && $b3 == " O"
       puts "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
-    if $c1 == "O" && $c2 == "O" && $c3 == "O"
+    if $c1 == "O " && $c2 == "O" && $c3 == " O"
       puts "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
-    if $a1 == "O" && $b1 == "O" && $c1 == "O"
+    if $a1 == "O " && $b1 == "O " && $c1 == "O "
       puts "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
@@ -295,17 +293,17 @@ end
       @p2.score =  @p2.score + 1;
       @@run = false
     end
-    if $a3 == "O" && $b3 == "O" && $c3 == "O"
+    if $a3 == " O" && $b3 == " O" && $c3 == " O"
       puts "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
-    if $a1 == "O" && $b2 == "O" && $c3 == "O"
+    if $a1 == "O " && $b2 == "O" && $c3 == " O"
       puts "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
-    if $a3 == "O" && $b2 == "O" && $c1 == "O"
+    if $a3 == " O" && $b2 == "O" && $c1 == "O "
       puts "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
