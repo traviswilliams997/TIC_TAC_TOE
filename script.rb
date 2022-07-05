@@ -36,84 +36,61 @@ class Player1
   def initialize()
     @score = 0
   end
+
+ def new_choice 
+  puts "This board position has already been selected"
+  puts "Enter a different position"
+  @choice = gets.chomp
+  self.player_choice(@choice)
+ end
     
   def player_choice(position)
     if position == "a1" && $a1 == "a1"
       $a1 = "X";
     elsif position == "a1" 
-      puts "This board position has already been selected"
-      puts "Enter a different position"
-      @new_choice_p1 = gets.chomp
-      self.player_choice(@new_choice_p1)
-
+      self.new_choice
     end
     if position == "a2" && $a2 == "a2"
       $a2 = "X";
     elsif position == "a2" 
-      puts "This board position has already been selected"
-      puts "Enter a different position"
-      @new_choice_p1 = gets.chomp
-      self.player_choice(@new_choice_p1)
-
+      self.new_choice
     end
     if position == "a3" && $a3 == "a3"
       $a3 = "X";
     elsif position == "a3" 
-      puts "This board position has already been selected"
-      puts "Enter a different position"
-      @new_choice_p1 = gets.chomp
-      self.player_choice(@new_choice_p1)
-
+      self.new_choice
     end
     if position == "b1" && $b1 == "b1"
       $b1 = "X";
     elsif position == "b1" 
-      puts "This board position has already been selected"
-      puts "Enter a different position"
-      @new_choice_p1 = gets.chomp
-      self.player_choice(@new_choice_p1)
-
+      self.new_choice
     end
     if position == "b2" && $b2 == "b2"
       $b2 = "X";
     elsif position == "b2" 
-      puts "This board position has already been selected"
-      puts "Enter a different position"
-      @new_choice_p1 = gets.chomp
-      self.player_choice(@new_choice_p1)
-
+      self.new_choice
     end
     if position == "b3" && $b3 == "b3"
       $b3 = "X";
     elsif position == "b3" 
-      puts "This board position has already been selected"
-      puts "Enter a different position"
-      @new_choice_p1 = gets.chomp
-      self.player_choice(@new_choice_p1)
+      self.new_choice
     end
     if position == "c1" && $c1 == "c1"
     $c1 = "X";
   elsif position == "c1" 
-    puts "This board position has already been selected"
-    puts "Enter a different position"
-    @new_choice_p1 = gets.chomp
-    self.player_choice(@new_choice_p1)
+    self.new_choice
+
   end
   if position == "c2" && $c2 == "c2"
     $c2 = "X";
   elsif position == "c2" 
-    puts "This board position has already been selected"
-    puts "Enter a different position"
-    @new_choice_p1 = gets.chomp
-    self.player_choice(@new_choice_p1)
+    self.new_choice
   end
   if position == "c3" && $c3 == "c3"
     $c3 = "X";
   elsif position == "c3" 
-    puts "This board position has already been selected"
-    puts "Enter a different position"
-    @new_choice_p1 = gets.chomp
-    self.player_choice(@new_choice_p1)
+    self.new_choice
+
   end 
   end  
 end
@@ -124,41 +101,68 @@ class Player2
   def initialize()
     @score = 0
   end
-    
+  def new_choice 
+    puts "This board position has already been selected"
+    puts "Enter a different position"
+    @choice = gets.chomp
+    self.player_choice(@choice)
+   end  
+
   def player_choice(position)
     if position == "a1" && $a1 == "a1"
       $a1 = "O";
     elsif position == "a1" 
-      puts "This board position has already been selected"
-      puts "Enter a different position"
-      @new_choice_p2 = gets.chomp
-      self.player_choice(@new_choice_p2)
+    self.new_choice
 
     end
-    if position == "a2"
+    if position == "a2" && $a2 == "a2"
       $a2 = "O";
+    elsif position == "a2" 
+    self.new_choice
+
     end
-    if position == "a3"
+    if position == "a3" && $a3 == "a3"
       $a3 = "O";
+    elsif position == "a3" 
+    self.new_choice
+
     end
-    if position == "b1"
+    if position == "b1" && $b1 == "b1"
       $b1 = "O";
+    elsif position == "b1" 
+    self.new_choice
+
     end
-    if position == "b2"
+    if position == "b2" && $b2 == "b2"
       $b2 = "O";
+    elsif position == "b2" 
+    self.new_choice
+
     end
-    if position == "b3"
-      $b3 = "O";
+    if position == "b3" && $b3 == "b3"
+      $b3= "O";
+    elsif position == "b3" 
+    self.new_choice
+
     end
-    if position == "c1"
+    if position == "c1" && $c1 == "c1"
       $c1 = "O";
+    elsif position == "c1" 
+    self.new_choice
+
     end
-    if position == "c2"
+    if position == "c2" && $c2 == "c2"
       $c2 = "O";
+    elsif position == "c2" 
+    self.new_choice
+
     end
-    if position == "c3"
+    if position == "c3" && $c3 == "c3"
       $c3 = "O";
-    end   
+    elsif position == "c3" 
+    self.new_choice
+
+    end 
   end  
 end
  class Game 
