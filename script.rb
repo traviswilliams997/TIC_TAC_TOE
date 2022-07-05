@@ -104,7 +104,21 @@ end
     @board.board_state
     @p1 = Player1.new()
     @p2 = Player2.new()
-  
+    i = 0
+    loop do
+      i = i + 1
+      self.play_round
+      if i == 5
+        if @p1.score > @p2.score
+          puts "PLayer 1 Won the match"
+        end
+        if @p1.score < @p2.score
+          puts "PLayer 2 Won the match"
+        end
+        break       # this will cause execution to exit the loop
+      end
+    end
+
   end
   def play_round
     while(@@run)
@@ -132,91 +146,89 @@ end
    end
   def check_who_won
     if $a1 == "X" && $a2 == "X" && $a3 == "X"
-      p "Player 1 won"
+      p "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       p @p1.score 
       @@run = false
     end
     if $b1 == "X" && $b2 == "X" && $b3 == "X"
-      p "Player 1 won"
+      p "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
     if $c1 == "X" && $c2 == "X" && $c3 == "X"
-      p "Player 1 won"
+      p "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
     if $a1 == "X" && $b1 == "X" && $c1 == "X"
-      p "Player 1 won"
+      p "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
     if $a2 == "X" && $b2 == "X" && $c2 == "X"
-      p "Player 1 won"
+      p "Player 1 won  this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
     if $a3 == "X" && $b3 == "X" && $c3 == "X"
-      p "Player 1 won"
+      p "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
     if $a1 == "X" && $b2 == "X" && $c3 == "X"
-      p "Player 1 won"
+      p "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
     if $a3 == "X" && $b2 == "X" && $c1 == "X"
-      p "Player 1 won"
+      p "Player 1 won this round"
       @p1.score =  @p1.score + 1;
       @@run = false
     end
 
     if $a1 == "O" && $a2 == "O" && $a3 == "O"
-      p "Player 2 won"
+      p "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $b1 == "O" && $b2 == "O" && $b3 == "O"
-      p "Player 2 won"
+      p "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $c1 == "O" && $c2 == "O" && $c3 == "O"
-      p "Player 2 won"
+      p "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $a1 == "O" && $b1 == "O" && $c1 == "O"
-      p "Player 2 won"
+      p "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $a2 == "O" && $b2 == "O" && $c2 == "O"
-      p "Player 2 won"
+      p "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $a3 == "O" && $b3 == "O" && $c3 == "O"
-      p "Player 2 won"
+      p "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $a1 == "O" && $b2 == "O" && $c3 == "O"
-      p "Player 2 won"
+      p "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $a3 == "O" && $b2 == "O" && $c1 == "O"
-      p "Player 2 won"
+      p "Player 2 won this round"
       @p2.score =  @p2.score + 1;
       @@run = false
     end
   end 
-
 end
 
 
 new_game = Game.new
-new_game.play_round
