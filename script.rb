@@ -18,10 +18,12 @@ class Board
   end
 end
 
-class Player1 
+class Player1
+  attr_accessor :score
+
 
   def initialize()
- 
+    @score = 0
   end
     
   def player_choice(position)
@@ -55,10 +57,11 @@ class Player1
   end  
 end
 
-class Player2 
+class Player2
+  attr_accessor :score
 
   def initialize()
-
+    @score = 0
   end
     
   def player_choice(position)
@@ -126,76 +129,91 @@ end
  
    def board_positions
      @board.board_state
-  end
+   end
   def check_who_won
     if $a1 == "X" && $a2 == "X" && $a3 == "X"
       p "Player 1 won"
+      @p1.score =  @p1.score + 1;
+      p @p1.score 
       @@run = false
     end
     if $b1 == "X" && $b2 == "X" && $b3 == "X"
       p "Player 1 won"
+      @p1.score =  @p1.score + 1;
       @@run = false
     end
     if $c1 == "X" && $c2 == "X" && $c3 == "X"
       p "Player 1 won"
+      @p1.score =  @p1.score + 1;
       @@run = false
     end
     if $a1 == "X" && $b1 == "X" && $c1 == "X"
       p "Player 1 won"
+      @p1.score =  @p1.score + 1;
       @@run = false
     end
     if $a2 == "X" && $b2 == "X" && $c2 == "X"
       p "Player 1 won"
+      @p1.score =  @p1.score + 1;
       @@run = false
     end
     if $a3 == "X" && $b3 == "X" && $c3 == "X"
       p "Player 1 won"
+      @p1.score =  @p1.score + 1;
       @@run = false
     end
     if $a1 == "X" && $b2 == "X" && $c3 == "X"
       p "Player 1 won"
+      @p1.score =  @p1.score + 1;
       @@run = false
     end
     if $a3 == "X" && $b2 == "X" && $c1 == "X"
       p "Player 1 won"
+      @p1.score =  @p1.score + 1;
       @@run = false
     end
 
     if $a1 == "O" && $a2 == "O" && $a3 == "O"
       p "Player 2 won"
+      @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $b1 == "O" && $b2 == "O" && $b3 == "O"
       p "Player 2 won"
+      @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $c1 == "O" && $c2 == "O" && $c3 == "O"
       p "Player 2 won"
+      @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $a1 == "O" && $b1 == "O" && $c1 == "O"
       p "Player 2 won"
+      @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $a2 == "O" && $b2 == "O" && $c2 == "O"
       p "Player 2 won"
+      @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $a3 == "O" && $b3 == "O" && $c3 == "O"
       p "Player 2 won"
+      @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $a1 == "O" && $b2 == "O" && $c3 == "O"
       p "Player 2 won"
+      @p2.score =  @p2.score + 1;
       @@run = false
     end
     if $a3 == "O" && $b2 == "O" && $c1 == "O"
       p "Player 2 won"
+      @p2.score =  @p2.score + 1;
       @@run = false
     end
   end 
-
-  
 
 end
 
