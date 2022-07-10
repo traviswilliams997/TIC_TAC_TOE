@@ -184,7 +184,7 @@ end
         if @p1.score < @p2.score
           puts "PLayer 2 Won the match"
         end
-        break       # this will cause execution to exit the loop
+        break       
       end
       @@run = true
       @board.reset_board
