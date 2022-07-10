@@ -45,6 +45,13 @@ class Player1
  end
     
   def player_choice(position)
+    unless  position  == "a1" || position  == "a2" || position  == "a3" || position  == "b1" || position  == "b2" || position  == "b3" || position  == "c1" || position  == "c2" || position  == "c3"
+      puts "Invalid Board Position"
+      puts "Player 1. Enter positon for X"
+      puts "Eg. For first row & first column enter a1"
+      @second_choice = gets.chomp
+      self.player_choice(@second_choice)
+  end
     if position == "a1" && $a1 == "a1"
       $a1 = "X ";
     elsif position == "a1" 
@@ -107,6 +114,17 @@ class Player2
   end  
 
   def player_choice(position)
+    
+      unless  position  == "a1" || position  == "a2" || position  == "a3" || position  == "b1" || position  == "b2" || position  == "b3" || position  == "c1" || position  == "c2" || position  == "c3"
+          puts "Invalid Board Position"
+          puts "Player 2. Enter positon for O"
+          puts "Eg. For first row & first column enter a1"
+          @second_choice = gets.chomp
+          self.player_choice(@second_choice)
+      end
+  
+     
+  
     if position == "a1" && $a1 == "a1"
       $a1 = "O ";
     elsif position == "a1" 
